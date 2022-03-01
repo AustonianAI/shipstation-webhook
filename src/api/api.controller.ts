@@ -5,6 +5,11 @@ import { ApiService } from './api.service';
 export class ApiController {
   constructor(private apiService: ApiService) {}
 
+  @Get()
+  hello() {
+    return 'hello pizza!';
+  }
+
   @Get('test')
   test() {
     return this.apiService.listOrders();
